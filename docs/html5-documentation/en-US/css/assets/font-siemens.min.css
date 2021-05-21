@@ -1,0 +1,11 @@
+/*!
+ *  Siemens Global Sans 2.0.0 by Siemens
+ */
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+    font-family: 'Siemens Sans Global';
+    src: url('../../fonts/SiemensSans_Global_Roman.ttf?v=2.0.0') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
