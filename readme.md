@@ -40,13 +40,16 @@ You can download the Data Service Development Kit Bundle to your computer from [
 - User documentation
 - [OpenAPI specification](docs/OpenAPI_specification.md)
 - [Application example](docs/Application_example.md)
-  
-The image is loaded from the Docker Hub:
-
 - Docker image
 - Data simulator
 - MQTT Broker
 - Data Service (with external interface (REST API) for non-Siemens applications)
+
+This GitHub-Repository contains:
+
+- adapted Docker file:  [docker-compose.yml](./docker-compose.yml)
+- NodeRED flow: [flows.json](./examples/NodeRED/flows.json)
+- [User documentation](./readme.md)
 
 ## Installation
 
