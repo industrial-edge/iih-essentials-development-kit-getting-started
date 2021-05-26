@@ -37,7 +37,7 @@ Fast implementation of your own app
 
 ### Prerequisites
 
-You can download the Data Service Development Kit Bundle to your computer from [Siemens Industry Online Support (SIOS ID 109792717)]((<https://support.industry.siemens.com/cs/ww/de/view/109792717>). The bundle includes the following components:
+You can download the Data Service Development Kit Bundle to your computer from [Siemens Industry Online Support (SIOS ID 109792717)](https://support.industry.siemens.com/cs/ww/de/view/109792717). The bundle includes the following components:
 
 - Docker file: docker-compose.yml
 - User documentation
@@ -59,6 +59,8 @@ This GitHub-Repository contains:
 The following services must be installed:
 
 - Docker for Linux
+  
+*Note: Linux device is used for this application example*
 
 ## Usage
 
@@ -74,7 +76,7 @@ You can find the further information about the following steps in the [docs](./d
 
 ### Note - additional Information
 
-If you need more information, you can find them in the user documentation of the[Data Service Development Kit Bundle]((<https://support.industry.siemens.com/cs/ww/de/view/109792717>).
+If you need more information, you can find them in the user documentation of the [Data Service Development Kit Bundle](https://support.industry.siemens.com/cs/ww/de/view/109792717).
   
 ## Contribution
 

@@ -20,8 +20,10 @@ You must carry out the following steps:
 
 To start the Docker container, follow these steps:
 
-1. Open Docker (Docker Compose Solution).
-2. Open the "development-kit" folder.
+*Note: Linux device is used for this application example*
+
+1. Go to your device.
+2. Open the "development-kit" folder from the downloaded and extracted zip file.
    The following components are contained in it:
    - documentation
      Here you will find, for example, the user documentation and the routes (OpenAPI) for the Data Service.
@@ -29,10 +31,10 @@ To start the Docker container, follow these steps:
      Here you will find, for example, application examples.
    - docker-compose.yml
    - ...
-3. Replace the docker-compose.yml with the docker-compose.yml of this repository.
-4. Right-click to call the Docker command line and the "Open in Terminal" menu command.
+3. Replace the docker-compose.yml with the [docker-compose.yml](../docker-compose.yml) of this repository.
+4. Right-click in the file explorer and click on "Open in Terminal".
 5. Load the Docker Image with following command: `docker load -i dataservicedevelopmentkit_1.1.0.img`
-6. Start the containers by typing: `docker - compose up`
+6. Start the containers by executing: `docker - compose up`
    All service images are downloaded from Docker Hub and launched as defined in the "docker-compose.yml" file. This file specifies which of the services run together, address,communication, etc.
 
 ## Create Tag in Simulation UI
