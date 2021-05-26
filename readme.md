@@ -41,8 +41,8 @@ You can download the Data Service Development Kit Bundle to your computer from [
 
 - Docker file: docker-compose.yml
 - User documentation
-- [OpenAPI specification](docs/OpenAPI_specification.md)
-- [Application example](docs/Application_example.md)
+- OpenAPI specification
+- Application example
 - Docker image
 - Data simulator
 - MQTT Broker
@@ -51,7 +51,7 @@ You can download the Data Service Development Kit Bundle to your computer from [
 This GitHub-Repository contains:
 
 - adapted Docker file:  [docker-compose.yml](./docker-compose.yml)
-- NodeRED flow: [flows.json](./examples/NodeRED/flows.json)
+- NodeRED flow: [flows.json](./src/NodeRED/flows.json)
 - [User documentation](./readme.md)
 
 ## Installation
