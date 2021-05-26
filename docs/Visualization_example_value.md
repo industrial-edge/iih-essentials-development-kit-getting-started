@@ -76,7 +76,7 @@ To connect the tag to the Data Service, follow these steps:
 To access the data via browser, follow these steps:
 
 1. Open a browser.
-2. Open the routes for the Data Service: [data-service-api-specification.html](../docs/openapi-documentation/data-service-api-specification.html)
+2. Open the routes for the Data Service: [data-service-api-specification.html](./data-service-api-specification.html)
 3. Change the server variable port to 34203 to get access via browser
    ![deploy VFC](../docs/graphics/api.png)
 4. Select the route "GET /DataService/Variables" by clicking on it
