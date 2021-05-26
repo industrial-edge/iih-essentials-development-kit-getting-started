@@ -8,7 +8,8 @@ networks:
 
 volumes:
   db-edge-apps-dataservicedevelopmentkit-volume:
-
+  node-red-data:
+    
 services:
 # Database
   db-edge-apps-dataservicedevelopmentkit:
@@ -59,3 +60,13 @@ services:
         condition: service_healthy
     mem_limit: 256mb
     restart: unless-stopped
+
+  node-red:
+    image: nodered/node-red
+    ports: 
+      - 1880:1880
+    networks: 
+      - dataservicedevelopmentkit_default
+      - proxy-redirect
+    volumes:
+      - node-red-data:/data

@@ -11,6 +11,7 @@ Using the Data Service Development Kit app you can develop your own apps based o
   - [Installation](#installation)
   - [Usage](#usage)
   - [Documentation](#documentation)
+    - [Note - additional Information](#note---additional-information)
   - [Contribution](#contribution)
   - [Licence and Legal Information](#licence-and-legal-information)
 
@@ -21,6 +22,8 @@ Using the Data Service Development Kit app you can develop your own apps based o
 Thanks to the perfect cooperation of the Siemens apps, you have, with Data Service Development Kit, access to all data sources that are compatible with Data Service and can use them with your app. The calculation of aggregations within Data Service even enables you to provide sum, maximum and minimum values to your customer without the need for another app.
 
 The free Development Kit provides you with a Docker Image that launches the Data Service API on the developer's computer and makes it callable. With this tool, you can develop your customer's app entirely without Industrial Edge access on your development computer. Nor do you need to own a real device that provides you with data. With our simulation service, plant data can be simulated without further ado.
+
+![deploy VFC](docs/graphics/overview.png)  
 
 ### General task
 
@@ -55,8 +58,7 @@ This GitHub-Repository contains:
 
 The following services must be installed:
 
-- Docker
-- Node js
+- Docker for Linux
 
 ## Usage
 
@@ -68,13 +70,11 @@ After the development phase, your app can be handed over to your customer togeth
 
 You can find the further information about the following steps in the [docs](./docs)
 
-- [Introduction](./docs/Introduction.md#security-information)
-- [Start Docker Container](./docs/Start_docker_container.md#requirement)
-- [Open local host (port)](./docs/Open_local_host.md#requirement)
-- [Application example](./docs/Application_example.md#description)
-- [OpenAPI specification](./docs/OpenAPI_specification.md#description)
-- [Publishing user-developed app in the IEM](./docs/Publishing_user-developed-app.md#description)
 - [Visualization of an example sinus in NodeRED](./docs/Visualization_example_value.md#description)
+
+### Note - additional Information
+
+If you need more information, you can find them in the user documentation of the[Data Service Development Kit Bundle]((<https://support.industry.siemens.com/cs/ww/de/view/109792717>).
   
 ## Contribution
 
