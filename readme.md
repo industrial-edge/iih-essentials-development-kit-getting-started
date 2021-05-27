@@ -11,7 +11,6 @@ Using the Data Service Development Kit app you can develop your own apps based o
   - [Installation](#installation)
   - [Usage](#usage)
   - [Documentation](#documentation)
-    - [Note - additional Information](#note---additional-information)
   - [Contribution](#contribution)
   - [Licence and Legal Information](#licence-and-legal-information)
 
@@ -60,7 +59,7 @@ The following services must be installed:
 
 - Docker for Linux
   
-*Note: Linux device is used for this application example*
+ > **_NOTE:_**  Linux device is used for this application example
 
 ## Usage
 
@@ -74,10 +73,8 @@ You can find the further information about the following steps in the [docs](./d
 
 - [Visualization of an example sinus in NodeRED](./docs/Visualization_example_value.md#description)
 
-### Note - additional Information
+ > **_NOTE - additional Information:_**  If you need more information, you can find them in the user documentation of the [Data Service Development Kit Bundle](https://support.industry.siemens.com/cs/ww/de/view/109792717).
 
-If you need more information, you can find them in the user documentation of the [Data Service Development Kit Bundle](https://support.industry.siemens.com/cs/ww/de/view/109792717).
-  
 ## Contribution
 
 Thanks for your interest in contributing. Anybody is free to report bugs, unclear documentation, and other problems regarding this repository in the Issues section or, even better, is free to propose any changes to this repository using Merge Requests.
