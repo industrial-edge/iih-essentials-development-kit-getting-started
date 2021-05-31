@@ -51,7 +51,7 @@ This GitHub-Repository contains:
 
 - adapted Docker file:  [docker-compose.yml](./docker-compose.yml)
 - NodeRED flow: [flows.json](./src/NodeRED/flows.json)
-- [User documentation](./readme.md)
+- [User documentation](./docs/Visualization_example_value.md#description)
 
 ## Installation
 
