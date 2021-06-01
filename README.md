@@ -18,7 +18,7 @@ Using the Data Service Development Kit app you can develop your own apps based o
 
 ### Overview
 
-This example introduces the Data Service Device Kit and how to extract data from the Data Service using the avilable API calls.
+This example introduces the Data Service Device Kit and how to extract data from the Data Service using the available API calls.
 The free Development Kit provides you with a Docker Image that launches the Data Service API on the developer's computer and makes it callable. With this tool, you can develop your customer's app entirely without Industrial Edge access on your development computer. Nor do you need to own a real device that provides you with data. With our simulation service, plant data can be simulated without further ado.
 
 - The Development Kit can be started with a few clicks on the development environment
