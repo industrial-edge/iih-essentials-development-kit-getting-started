@@ -18,25 +18,25 @@ Using the Data Service Development Kit app you can develop your own apps based o
 
 ### Overview
 
-Thanks to the perfect cooperation of the Siemens apps, you have, with Data Service Development Kit, access to all data sources that are compatible with Data Service and can use them with your app. The calculation of aggregations within Data Service even enables you to provide sum, maximum and minimum values to your customer without the need for another app.
-
+This example introduces the Data Service Device Kit and how to extract data from the Data Service using the available API calls.
 The free Development Kit provides you with a Docker Image that launches the Data Service API on the developer's computer and makes it callable. With this tool, you can develop your customer's app entirely without Industrial Edge access on your development computer. Nor do you need to own a real device that provides you with data. With our simulation service, plant data can be simulated without further ado.
 
-![deploy VFC](docs/graphics/overview.png)  
+- The Development Kit can be started with a few clicks on the development environment
+- Immediately testable of your API calls even without access to a real PLC
 
 ### General task
 
-Fast implementation of your own app
+The simulation tool - provided by the Development Kit - generates a **Sinus Signal** and stores the data in the **Data Service** container. The Flow of the Node-Red applications accesses the **Data Service** via available API calls and displays the data in a dashboard.
 
-- Simple - the Development Kit can be started with a few clicks on the computer
-- Direct - immediately testable even without access to a real PLC
-- Comprehensive - provides the complete data service, including documentation and application examples
+![deploy VFC](docs/graphics/overview.png)  
 
 ## Requirements
 
 ### Prerequisites
 
-You can download the Data Service Development Kit Bundle to your computer from [Siemens Industry Online Support (SIOS ID 109792717)](https://support.industry.siemens.com/cs/ww/de/view/109792717). The bundle includes the following components:
+- Data Service Development Kit for Industrial Edge V.1.1.0
+
+You can download the Data Service Development Kit Bundle to your computer from [Siemens Industry Online Support (SIOS ID 109792717)](https://support.industry.siemens.com/cs/ww/en/view/109792717). The bundle includes the following components:
 
 - Docker file: docker-compose.yml
 - User documentation
@@ -63,9 +63,9 @@ The following services must be installed:
 
 ## Usage
 
-The Data Service Development Kit offers you the possibility to make your app quickly and easily fit for Industrial Edge. Using the integrated API interface, you save your app's data to the Data Service database structure and retrieve it when needed. This means that other apps, such as Performance Insight or Notifier, can easily access the data and use it for themselves.
+The Data Service Development Kit offers you the possibility to make your app  fit for Industrial Edge. Using the integrated API interface, you save your app's data to the Data Service database structure and retrieve it when needed. This means that other apps, such as Performance Insight or Notifier, can easily access the data and use it for themselves.
 
-After the development phase, your app can be handed over to your customer together with the Data Service. In a few simple steps, the customer connects the Data Service with the already available connectors and thus creates a quick link to his plant.
+After the development phase, your app can be handed over to your customer together with the Data Service. In a few steps, the customer connects the Data Service with the already available connectors and thus creates a quick link to his plant.
 
 ## Documentation
 
@@ -73,7 +73,7 @@ You can find the further information about the following steps in the [docs](./d
 
 - [Visualization of an example sinus in NodeRED](./docs/Visualization_example_value.md#description)
 
- > **_NOTE - additional Information:_**  If you need more information, you can find them in the user documentation of the [Data Service Development Kit Bundle](https://support.industry.siemens.com/cs/ww/de/view/109792717).
+ > **_NOTE - additional Information:_**  If you need more information, you can find them in the user documentation of the [Data Service Development Kit Bundle](https://support.industry.siemens.com/cs/ww/en/view/109792717).
 
 ## Contribution
 
