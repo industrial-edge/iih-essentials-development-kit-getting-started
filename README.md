@@ -36,7 +36,7 @@ The simulation tool - provided by the Development Kit - generates a **Sinus Sign
 
 - Data Service Development Kit for Industrial Edge V.1.1.0
 
-You can download the Data Service Development Kit Bundle to your computer from [Siemens Industry Online Support (SIOS ID 109792717)](https://support.industry.siemens.com/cs/ww/de/view/109792717). The bundle includes the following components:
+You can download the Data Service Development Kit Bundle to your computer from [Siemens Industry Online Support (SIOS ID 109792717)](https://support.industry.siemens.com/cs/ww/en/view/109792717). The bundle includes the following components:
 
 - Docker file: docker-compose.yml
 - User documentation
@@ -73,7 +73,7 @@ You can find the further information about the following steps in the [docs](./d
 
 - [Visualization of an example sinus in NodeRED](./docs/Visualization_example_value.md#description)
 
- > **_NOTE - additional Information:_**  If you need more information, you can find them in the user documentation of the [Data Service Development Kit Bundle](https://support.industry.siemens.com/cs/ww/de/view/109792717).
+ > **_NOTE - additional Information:_**  If you need more information, you can find them in the user documentation of the [Data Service Development Kit Bundle](https://support.industry.siemens.com/cs/ww/en/view/109792717).
 
 ## Contribution
 
