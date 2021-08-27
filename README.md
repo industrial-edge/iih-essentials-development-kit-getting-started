@@ -1,8 +1,8 @@
-# App Data Service Development Kit for Industrial Edge
+# Data Service Development Kit Getting Started
 
 Using the Data Service Development Kit app you can develop your own apps based on the Data Service and integrate them into the Siemens Industrial Edge Management System.
 
-- [App Data Service Development Kit for Industrial Edge](#app-data-service-development-kit-for-industrial-edge)
+- [Data Service Development Kit Getting Started](#data-service-development-kit-getting-started)
   - [Description](#description)
     - [Overview](#overview)
     - [General task](#general-task)
