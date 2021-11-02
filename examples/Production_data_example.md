@@ -56,7 +56,6 @@ In the flow presented, the following functionalities are available:
 #### Selection of time interval for data extraction
 
 The first flow in the application example allows to set a datetime interval, that will be taken as reference for the further data extractions. 
-
 Depending on the time ranges define in *function (2)* node below, the flow will set two global variables, `global.from` and `global.to`.
 
 ![deploy VFC](../examples/graphics/set-datetime-flow.PNG)
