@@ -66,17 +66,17 @@ If needed, datetime interval can be changed in order to extract a higher volume 
 
 #### Data retrieval from Data Service application database through APIs calls
 
-In the main flow, the *DataService Read Variables* node takes as input the time range set in the previous paragraph, together with the list of variables explicited in the configuration of the node.
+In the main flow, the `DataService Read Variables` node takes as input the time range set in the previous paragraph, together with the list of variables explicited in the configuration of the node.
 
 ![deploy VFC](../examples/graphics/data-extraction-from-data-service-flow.PNG)
 
-In fact, in `Variables Names` field of *DataService Read Variables* node, the variables of interest to be extracted from Data Service application need to be written, separated by comma and without any spaces in between.
+In fact, in `Variables Names` field of `DataService Read Variables` node, the variables of interest to be extracted from Data Service application need to be written, separated by comma and without any spaces in between.
 As can be seen in the following figure, in this application example three variables of interest were configured: `Production_GoodPieces`, `Production_BadPieces`, `Production_MachSpeed`.
 
 ![deploy VFC](../examples/graphics/data-service-read-variables-names.PNG)
 
 After having explicited the tags of interest, trigger the data extraction through the inject node.
-You will see status of *DataService Read Variables* node changing from "Querying data in progress" to "Query completed", receving then an output message containing all the data points of the variables of interest.
+You will see status of `DataService Read Variables` node changing from "Querying data in progress" to "Query completed", receving then an output message containing all the data points of the variables of interest.
 
 ![deploy VFC](../examples/graphics/data-service-read-variables-node-output.PNG)
 
