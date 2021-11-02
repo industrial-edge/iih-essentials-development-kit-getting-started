@@ -128,8 +128,6 @@ Once the data are formatted in the correct way and sent to `csv` node, the CSV f
 
 To download the CSV file created, simply go to your edge device, select NodeRED application inside the *Management* menu and click on *Download* action. The file will be locally saved on your PC.
 
-![deploy VFC](../examples/graphics/download-csv-file.PNG)
-
 Below an example of CSV file saved by the flow.
 
 ![deploy VFC](../examples/graphics/csv-data-extraction.PNG)
