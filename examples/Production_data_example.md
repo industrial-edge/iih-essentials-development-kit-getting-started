@@ -100,7 +100,7 @@ The hereby used `charts-ui` node (`Production Trend`) allows to visualize differ
 
 ![deploy VFC](../examples/graphics/data-visualization-flow.PNG)
 
-In the flow highlighted above, starting from the data received from `Data Service Read Variables` node, the function `Create chart msg` formats all data received into the standard of `charts-ui` node, with the aim of creating a data structure for a line graph containing three time series (`Production_GoodPieces`, `Production_BadPieces`, `Production_MachSpeed`) in the selected time interval. 
+In the flow highlighted above, starting from the data received from `DataService Read Variables` node, the function `Create chart msg` formats all data received into the standard of `charts-ui` node, with the aim of creating a data structure for a line graph containing three time series (`Production_GoodPieces`, `Production_BadPieces`, `Production_MachSpeed`) in the selected time interval. 
 
 Each time series formatted by the function `Create chart msg` node will contain several samples and their relative timestamps. 
 
@@ -118,7 +118,7 @@ To allow local data storage, this application example exploits `csv` node of `no
 
 ![deploy VFC](../examples/graphics/data-export-csv-flow.PNG)
 
-To do this, function node `CSV data arrangement` is used to format the data received from `Data Service Read Variables` node into the standard of `csv` node.
+To do this, function node `CSV data arrangement` is used to format the data received from `DataService Read Variables` node into the standard of `csv` node.
 
 The function node, in fact, goes through all data elements, organizing them as follows: 
   
