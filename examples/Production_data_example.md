@@ -9,7 +9,7 @@
       - [Data retrieval from Data Service application database through APIs calls](#data-retrieval-from-data-service-application-database-through-apis-calls)
       - [Data visualization through NodeRED dashboard](#data-visualization-through-nodered-dashboard)
       - [Data saving into a CSV file](#data-saving-into-a-csv-file)
-  - [*Data Service Read Variables* node](#data-service-read-variables-node)
+  - [*DataService Read Variables* node](#dataservice-read-variables-node)
   
 ## Description
 
@@ -124,7 +124,9 @@ The function node, in fact, goes through all data elements, organizing them as f
   
 ![deploy VFC](../examples/graphics/csv-data-arrangement-flow.PNG)
 
-Once the data are formatted in the correct way and sent to `csv` node, the CSV file can be saved by the flow in the Application Volumes of the edge device on which the NodeRED application is installed. This operation is performed by the `file` node of `node-red` library.
+Once the data are formatted in the correct way and sent to `csv` node, the CSV file is saved by the flow in the Application Volumes of the edge device on which the NodeRED application is installed. This operation is performed by the `file` node of `node-red` library.
+
+To download the CSV file created, simply go to your edge device, select NodeRED application inside the *Management* menu and click on *Download* action. The file will be locally saved on your PC.
 
 ![deploy VFC](../examples/graphics/download-csv-file.PNG)
 
@@ -132,7 +134,7 @@ Below an example of CSV file saved by the flow.
 
 ![deploy VFC](../examples/graphics/csv-data-extraction.PNG)
 
-### *Data Service Read Variables* node
+### *DataService Read Variables* node
 
 Let's now dive into the subflow `DataService Read Variables` node, representing the core of this application example.
 
