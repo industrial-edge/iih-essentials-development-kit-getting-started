@@ -11,6 +11,7 @@ Using the Data Service Development Kit app you can develop your own apps based o
   - [Installation](#installation)
   - [Usage](#usage)
   - [Documentation](#documentation)
+  - [Application Example](#application-example)
   - [Contribution](#contribution)
   - [Licence and Legal Information](#licence-and-legal-information)
 
@@ -69,11 +70,19 @@ After the development phase, your app can be handed over to your customer togeth
 
 ## Documentation
 
-You can find the further information about the following steps in the [docs](./docs)
+You can find the further information about the following steps in the [docs](./docs):
 
 - [Visualization of an example sinus in NodeRED](./docs/Visualization_example_value.md#description)
 
  > **_NOTE - additional Information:_**  If you need more information, you can find them in the user documentation of the [Data Service Development Kit Bundle](https://support.industry.siemens.com/cs/ww/en/view/109792717).
+
+## Application Example
+
+An example on how to extract data from Data Service application using the available API calls is provided in the [examples](./examples):
+
+- [Production data extraction and visualization in NodeRED](./examples/Production_data_example.md#description) 
+
+The guide above explains how to extract data from a PLC data source, save data into the Data Service database and retrieve them using NodeRED, with the aim of saving the values of the collected data points into a CSV file or exploiting them in other applications for specific purposes. 
 
 ## Contribution
 
