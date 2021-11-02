@@ -16,9 +16,11 @@
 This example is intended to show you how to extract data from Data Service database, how to save the extracted data into a CSV file and how to visualize them through a dedicated dashboard using NodeRED.
 
 To do this, you will create some tags in the Data Service application and then exploit API calls to visualize the tags via NodeRED application.
+
 For more information regarding Data Service APIs, please check [Access Data via Browser](#access-data-via-browser) documentation in [docs](./docs).
 
 The tags used in this application example were integrated into Data Service application as tags configured within S7 Connector from a PLC data source.
+
 If a PLC data source is not available, the tags can be as well created through the Simulation UI, as explained in paragraph [Create Tag in Simulation UI](#create-tag-in-simulation-ui) for the Sinus example.
 
 ## Usage
@@ -42,6 +44,7 @@ To create these tags inside Data Service application, simply use *Add variable* 
 ### Access Data via Node-RED
 
 Using the APIs exposed by Data Service, this paragraph shows how to exploit a subflow node in NodeRED to read data from Data Service application based on their tags names.
+
 In the flow presented, the following functionalities are available:
 - Selection of time interval for data extraction.
 - Data retrieval from Data Service application database through APIs calls.
@@ -53,11 +56,13 @@ In the flow presented, the following functionalities are available:
 #### Selection of time interval for data extraction
 
 The first flow in the application example allows to set a datetime interval, that will be taken as reference for the further data extractions. 
+
 Depending on the time ranges define in *function (2)* node below, the flow will set two global variables, `global.from` and `global.to`.
 
 ![deploy VFC](../examples/graphics/set-datetime-flow.PNG)
 
 From the *inject (1)* node, *function (2)* node takes the current datetime as the end time, setting it as `global.to` variabile. As regards instead variable `global.from`, this is set subtracting 1 hour from the current datetime.
+
 In this way, data extraction will consider only data of the last hour.
 
 ![deploy VFC](../examples/graphics/set-datetime-flow-range-spec.PNG)
@@ -71,16 +76,19 @@ In the main flow, the `DataService Read Variables` node takes as input the time 
 ![deploy VFC](../examples/graphics/data-extraction-from-data-service-flow.PNG)
 
 In fact, in `Variables Names` field of `DataService Read Variables` node, the variables of interest to be extracted from Data Service application need to be written, separated by comma and without any spaces in between.
+
 As can be seen in the following figure, in this application example three variables of interest were configured: `Production_GoodPieces`, `Production_BadPieces`, `Production_MachSpeed`.
 
 ![deploy VFC](../examples/graphics/data-service-read-variables-names.PNG)
 
 After having explicited the tags of interest, trigger the data extraction through the inject node.
+
 You will see status of `DataService Read Variables` node changing from "Querying data in progress" to "Query completed", receving then an output message containing all the data points of the variables of interest.
 
 ![deploy VFC](../examples/graphics/data-service-read-variables-node-output.PNG)
 
 In the output message, for each variable name, an array of objects is given. 
+
 Each object is a data point of the tag extracted from Data Service database, with a certain timestamp, value and quality code, as can be seen from the image below.
 
 ![deploy VFC](../examples/graphics/data-service-read-variables-node-output-details.PNG)
@@ -88,12 +96,15 @@ Each object is a data point of the tag extracted from Data Service database, wit
 #### Data visualization through NodeRED dashboard
 
 In order to visualize data obtained from the previously described flow, it is possible to use the Web Dashboard functionality of NodeRED together with the nodes of the `node-red-dashboard` library, dedicated to the representation of different graphical objects such as gauges, text fields and graphs.
+
 The hereby used `charts-ui` node (`Production Trend`) allows to visualize different types of charts (lines, bars, pie) on the Web Dashboard of NodeRED, either by sending new data in real-time or by sending the whole data structure.
 
 ![deploy VFC](../examples/graphics/data-visualization-flow.PNG)
 
 In the flow highlighted above, starting from the data received from `Data Service Read Variables` node, the function `Create chart msg` formats all data received into the standard of `charts-ui` node, with the aim of creating a data structure for a line graph containing three time series (`Production_GoodPieces`, `Production_BadPieces`, `Production_MachSpeed`) in the selected time interval. 
+
 Each time series formatted by the function `Create chart msg` node will contain several samples and their relative timestamps. 
+
 Below an example of the output message received from the function node `Create chart msg`:
 
 ![deploy VFC](../examples/graphics/time-series-payload-flow.PNG)
@@ -109,6 +120,7 @@ To allow local data storage, this application example exploits `csv` node of `no
 ![deploy VFC](../examples/graphics/data-export-csv-flow.PNG)
 
 To do this, function node `CSV data arrangement` is used to format the data received from `Data Service Read Variables` node into the standard of `csv` node.
+
 The function node, in fact, goes through all data elements, organizing them as follows: 
   
 ![deploy VFC](../examples/graphics/csv-data-arrangement-flow.PNG)
