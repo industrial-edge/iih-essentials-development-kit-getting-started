@@ -33,8 +33,10 @@ To start the Docker container, follow these steps:
    - ...
 3. Replace the docker-compose.yml with the [docker-compose.yml](../docker-compose.yml) of this repository.
 4. Right-click in the file explorer and click on "Open in Terminal".
-5. Load the Docker Image with following command: `docker load -i dataservicedevelopmentkit_1.1.0.img`
-6. Start the containers by executing: `docker - compose up`
+5. Unzip the downloaded image file from the downloaded "data-service-development-kit_1.3.0.zip" with: `7za x data-service-development-kit_1.3.0.zip` ( Note: p7zip has to be installed with `sudo apt-get install p7zip-full p7zip-rar`)
+6. Load the Docker Image with following command: `docker load -i data-service-development-kit_1.3.0.img`
+
+7. Start the containers by executing: `docker - compose up`
    All service images are downloaded from Docker Hub and launched as defined in the "docker-compose.yml" file. This file specifies which of the services run together, address,communication, etc.
 
 ## Create Tag in Simulation UI
