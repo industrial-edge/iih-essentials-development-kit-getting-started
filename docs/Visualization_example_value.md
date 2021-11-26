@@ -31,10 +31,17 @@ To start the Docker container, follow these steps:
      Here you will find, for example, application examples.
    - docker-compose.yml
    - ...
-3. Replace the docker-compose.yml with the [docker-compose.yml](../docker-compose.yml) of this repository.
+3. Replace the docker-compose.yml with the [docker-compose.yml](../docker-compose.yml) of this repository containing Node-Red service.
 4. Right-click in the file explorer and click on "Open in Terminal".
-5. Load the Docker Image with following command: `docker load -i dataservicedevelopmentkit_1.1.0.img`
-6. Start the containers by executing: `docker - compose up`
+5. Unzip the zipped file with Data Service development kit docker image. When using linux, it is recommended to use following package:
+
+   ```bash
+   sudo apt-get install p7zip-full p7zip-rar
+   7za x data-service-development-kit_1.3.0.zip
+   ```
+
+6. Load the Docker Image with following command: `docker load -i dataservicedevelopmentkit_1.3.0.img`
+7. Start the containers by executing: `docker - compose up`
    All service images are downloaded from Docker Hub and launched as defined in the "docker-compose.yml" file. This file specifies which of the services run together, address,communication, etc.
 
 ## Create Tag in Simulation UI
@@ -43,7 +50,7 @@ To create a tag, follow these steps:
 
 1. Open a browser.
 2. Access the Simulation UI
-   To start the simulation UI for the Data Service, enter the following address: `http://localhost:34519`
+   To start the simulation UI for the Data Service, enter the following address: `http://localhost:4519`
 3. Add a Aspect with following configuration and save it
     - Name: Example Aspect
     - AssetId: 1
@@ -64,7 +71,7 @@ To create a tag, follow these steps:
 To connect the tag to the Data Service, follow these steps:
 
 1. Open a browser.
-2. To start the Data Service, enter the following address: `http://localhost:34203`
+2. To start the Data Service, enter the following address: `http://localhost:4203`
 3. Add a Variable in tab "Connectivity"
    - Adapter: Simulation Connector
    - Tag: Example Aspect/default/Sinus
@@ -76,30 +83,19 @@ To connect the tag to the Data Service, follow these steps:
 To access the data via browser, follow these steps:
 
 1. Open a browser.
-2. Open the routes for the Data Service: [data-service-api-specification.html](./data-service-api-specification.html)
-3. Change the server variable port to 34203 to get access via browser
-   ![deploy VFC](../docs/graphics/api.png)
-4. Select the route "GET /DataService/Variables" by clicking on it
-5. Click on "Try it out" to activate the settings of this route
-6. Leave the Parameters empty to get all Variables
-7. Click on "Execute"
-8. Copy the Request URL
-   ![deploy VFC](../docs/graphics/api-get-variables.png)  
-9. Paste the Request URL in a new tab of the browser
-10. All configured variables are shown
-11. Copy the variableId of the variable "Sinus"
-   ![deploy VFC](../docs/graphics/api-browser-variables.png)
-12. Open the tab of the Data Service API Specification
-13. Select the route "Get /DataService/Data
-14. Click on "Try it out" to activate the settings of this route
-15. Paste the variableId of the variable "Sinus" into the parameter variableIds
-16. Configure the parameters "from" and "to" with a timestamp so that data should be available in between. For example you can choose from the actual day at 00:00 o´clock to next day at 00:00 o´clock
-17. Click on "Execute"
-18. Copy the Request URL
-    ![deploy VFC](../docs/graphics/api-get-data.png)
-19. Paste the Request URL in a new tab of the browser
-20. All values of variable "Sinus" are shown
-    ![deploy VFC](../docs/graphics/api-browser-data.png)
+2. Open the routes for the Data Service: [http://localhost:4203/assets/api-documentation/api-specification.html#/](http://localhost:4203/assets/api-documentation/api-specification.html#/)
+3. Select the route "GET /DataService/Variables" by clicking on it
+4. Type `http://localhost:4203/DataService/Variables` into the browser. You should be able to get the variable information. 
+   ![deploy VFC](../docs/graphics/access_over_browser.PNG)
+5.  Select the route "Get /DataService/Data
+6.  Type `http://localhost:4203/DataService/Data` into the browser.
+7.  Paste the variableId of the variable "Sinus" into the parameter variableIds
+8.  Configure the parameters "from" and "to" with a timestamp so that data should be available in between. For example you can choose from the actual day at 00:00 o´clock to next day at 00:00 o´clock
+9.  After requesting the URL, you should be able to see the variables data in selected time range. 
+
+   ![deploy VFC](../docs/graphics/access_over_browser_data.PNG)
+
+
 
 ## Access Data via Node-RED
 
