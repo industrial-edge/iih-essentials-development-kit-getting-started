@@ -13,7 +13,9 @@ This example is intended to show you how to use this application on a example si
 
 You will create a tag in the Simulation UI, connect the tag with the data service, display the tag via browser and finally visualize the tag via Node-RED.
 
-You must carry out the following steps:
+If you are interested in how the application example works, [here](./Implementation.md) you can find more details.
+
+To follow this application example, you must carry out the following steps:
 
 ## Start Docker Container
 
