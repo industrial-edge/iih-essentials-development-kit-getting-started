@@ -5,8 +5,7 @@
   - [Start Docker Container](#start-docker-container)
   - [Create Tag in Simulation UI](#create-tag-in-simulation-ui)
   - [Transfer Tag to Data Service](#transfer-tag-to-data-service)
-  - [Access Data via Browser](#access-data-via-browser)
-  - [Access Data via Node-RED](#access-data-via-node-red)
+  - [Use provided application example to access Data via Node-RED and save data in .csv file](#use-provided-application-example-to-access-data-via-node-red-and-save-data-in-csv-file)
   
 ## Description
 
@@ -78,45 +77,36 @@ To connect the tag to the Data Service, follow these steps:
 
 ![deploy VFC](../docs/graphics/data_service.png)
 
-## Access Data via Browser
 
-To access the data via browser, follow these steps:
+## Use provided application example to access Data via Node-RED and save data in .csv file
 
-1. Open a browser.
-2. Open the routes for the Data Service: [http://localhost:4203/assets/api-documentation/api-specification.html#/](http://localhost:4203/assets/api-documentation/api-specification.html#/)
-3. Select the route "GET /DataService/Variables" by clicking on it
-4. Type `http://localhost:4203/DataService/Variables` into the browser. You should be able to get the variable information. 
-   ![deploy VFC](../docs/graphics/access_over_browser.PNG)
-5.  Select the route "Get /DataService/Data
-6.  Type `http://localhost:4203/DataService/Data` into the browser.
-7.  Paste the variableId of the variable "Sinus" into the parameter variableIds
-8.  Configure the parameters "from" and "to" with a timestamp so that data should be available in between. For example you can choose from the actual day at 00:00 o´clock to next day at 00:00 o´clock
-9.  After requesting the URL, you should be able to see the variables data in selected time range. 
-
-   ![deploy VFC](../docs/graphics/access_over_browser_data.PNG)
-
-
-
-## Access Data via Node-RED
-
-1. Open a browser.
-2. Access Node-RED
+1. Create a folder in the same path where your docker-compose file is located and run the following command to make sure you have the right permission.
+   ```bash
+   mkdir export
+   sudo chown -R 1000:1000 ./export
+   ```
+2. Open a browser.
+3. Access Node-RED
    To start Node-RED, enter the following address: `http://localhost:1880`
-3. Install the node-red-dashboard
+4. Install the node-red-dashboard
    To install the node-red-dashboard, open "Manage palette" in the menu. In the tab "Install" search for "node-red-dashboard" and install it
     ![deploy VFC](../docs/graphics/nodeRED-install.png)
-4. Import the [Flow](../src/NodeRED/flows.json)
+5. Import the [Flow](../src/flows.json)
    To import the flow, open "Import" in the menu. Select the file, that should be imported, and click on "Import"
    ![deploy VFC](../docs/graphics/nodeRED-import.png)
    The Flow contains following nodes:
-   ![deploy VFC](../docs/graphics/nodeRED-nodes.png)
-5. Select a Group for the chart-node "Sinus Wave"
-   To edit the Group of the Sinus Wave, double click on node "Sinus Wave". "Edit" the Group and "Update" it
-   ![deploy VFC](../docs/graphics/nodeRED-chart-node.png)
-6. Deploy th Flow
-7. Inject by clicking on the node "true"
-8. Open Dashboard to see the values of "Sinus"
-   To open the Dashboard, select tab "dashboard" in the top right of Node-RED and expand it
-   ![deploy VFC](../docs/graphics/nodeRED-deploy.png)
-9. A new Tab with the chart opens
-    ![deploy VFC](../docs/graphics/nodeRED-sinusWave.png)
+
+   ![deploy VFC](../docs/graphics/flow_nodes.PNG)
+6. Deploy the flow and access the dashboard by accessing `http://localhost:1880/ui`
+7. Adjust the `From` and `To` variables based on your needs or leave it as it is for current date. 
+8. Go back to your flow and double click on the `Data Service Read Variables` sub-flow. Make sure the "Variable names" match your variable inside of the Data Service. 
+   ![deploy VFC](../docs/graphics/sub-flow-settings.PNG)
+ > **_NOTE:_**  If you multiple variables, you can write them all in the "Variable names" setting sparated by commas without spaces.
+
+9. Activate the inject buttons as described in the picture below.
+
+   ![deploy VFC](../docs/graphics/activate-flow.PNG)
+10. Go back to the dashboard. You shoul be able to see your data visualized.
+
+   ![deploy VFC](../docs/graphics/data-visual.PNG)
+11. The `.csv` file is stored inside `./export` folder.

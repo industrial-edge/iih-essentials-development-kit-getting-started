@@ -61,11 +61,13 @@ services:
     restart: unless-stopped
 
   node-red:
-    image: nodered/node-red
+    image: nodered/node-red:1.3.4
     ports: 
       - 1880:1880
+    privileged: true
     networks: 
       - dataservicedevelopmentkit_default
       - proxy-redirect
     volumes:        
       - node-red-data:/data
+      - './export:/home/nodered/node-red-home/_report'

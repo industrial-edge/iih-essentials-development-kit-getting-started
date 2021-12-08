@@ -1,8 +1,6 @@
 # Data Service Development Kit Getting Started
 
-Using the Data Service Development Kit app you can develop your own apps based on the Data Service and integrate them into the Siemens Industrial Edge Management System.
-
-- [Data Service Development Kit Getting Started](#data-service-development-kit-getting-started)
+Using the Data Service Development Kit app you can develop your own apps based on the Data Service, test your app locally with simulated data to make sure your it behaves the same once you deploy your app to Industrial Edge. - [Data Service Development Kit Getting Started](#data-service-development-kit-getting-started)
   - [Description](#description)
     - [Overview](#overview)
     - [General task](#general-task)
@@ -34,11 +32,11 @@ The simulation tool - provided by the Development Kit - generates a **Sinus Sign
 
 ### Prerequisites
 
-- Data Service Development Kit for Industrial Edge V.1.1.0
+- Data Service Development Kit for Industrial Edge V.1.3.0
 
 You can download the Data Service Development Kit Bundle to your computer from [Siemens Industry Online Support (SIOS ID 109792717)](https://support.industry.siemens.com/cs/ww/en/view/109792717). The bundle includes the following components:
 
-- Docker file: docker-compose.yml
+- Docker app: docker-compose.yml
 - User documentation
 - OpenAPI specification
 - Application example
@@ -49,7 +47,7 @@ You can download the Data Service Development Kit Bundle to your computer from [
 
 This GitHub-Repository contains:
 
-- adapted Docker file:  [docker-compose.yml](./docker-compose.yml)
+- adapted [docker-compose.yml](./docker-compose.yml)
 - NodeRED flow: [flows.json](./src/NodeRED/flows.json)
 - [User documentation](./docs/Visualization_example_value.md#description)
 
