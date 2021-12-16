@@ -1,6 +1,8 @@
 # Data Service Development Kit Getting Started
 
 Using the Data Service Development Kit app you can develop your own apps based on the Data Service, test your app locally with simulated data to make sure your it behaves the same once you deploy your app to Industrial Edge. - [Data Service Development Kit Getting Started](#data-service-development-kit-getting-started)
+
+- [Data Service Development Kit Getting Started](#data-service-development-kit-getting-started)
   - [Description](#description)
     - [Overview](#overview)
     - [General task](#general-task)
