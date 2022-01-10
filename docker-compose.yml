@@ -9,7 +9,7 @@ networks:
 volumes:
   db-edge-apps-dataservicedevelopmentkit-volume:
   node-red-data:
-    
+
 services:
 # Database
   db-edge-apps-dataservicedevelopmentkit:
@@ -43,15 +43,14 @@ services:
     restart: unless-stopped
 
 # Services
-  dataservicedevelopmentkit:
-    image: hmiappfactory/dataservicedevelopmentkit:1.1.0
+  edgeappdataservice:
+    image: siemensindustrialedge/dataservicedevelopmentkit:1.3.0
     environment:
       - EXTENDED_ERRORS=true
       - LOG_DEBUG_INFO=true
-      - max_old_space_size=200m
     ports:
-      - 34203:4203
-      - 34519:4519
+      - 4203:4203
+      - 4519:4519
     networks:
       - dataservicedevelopmentkit_default
       - proxy-redirect
@@ -62,11 +61,13 @@ services:
     restart: unless-stopped
 
   node-red:
-    image: nodered/node-red
+    image: nodered/node-red:1.3.4
     ports: 
       - 1880:1880
+    privileged: true
     networks: 
       - dataservicedevelopmentkit_default
       - proxy-redirect
-    volumes:
+    volumes:        
       - node-red-data:/data
+      - './export:/home/nodered/node-red-home/_report'
