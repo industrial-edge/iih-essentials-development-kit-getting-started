@@ -23,7 +23,7 @@ To start the Docker container, follow these steps:
 
  > **_NOTE:_**  Linux device is used for this application example
 
-1. Go to your device.
+1. Clone
 2. Open the "development-kit" folder from the downloaded and extracted zip file.
    The following components are contained in it:
    - documentation
