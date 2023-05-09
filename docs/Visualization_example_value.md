@@ -23,27 +23,9 @@ To start the Docker container, follow these steps:
 
  > **_NOTE:_**  Linux device is used for this application example
 
-1. Clone
-2. Open the "development-kit" folder from the downloaded and extracted zip file.
-   The following components are contained in it:
-   - documentation
-     Here you will find, for example, the user documentation and the routes (OpenAPI) for the Data Service.
-   - examples
-     Here you will find, for example, application examples.
-   - docker-compose.yml
-   - ...
-3. Replace the docker-compose.yml with the [docker-compose.yml](../docker-compose.yml) of this repository containing Node-Red service.
-4. Right-click in the file explorer and click on "Open in Terminal".
-5. Unzip the zipped file with Data Service development kit docker image. When using linux, it is recommended to use following package:
-
-   ```bash
-   sudo apt-get install p7zip-full p7zip-rar
-   7za x data-service-development-kit_1.3.0.zip
-   ```
-
-6. Load the Docker Image with following command: `docker load -i dataservicedevelopmentkit_1.3.0.img`
-7. Start the containers by executing: `docker - compose up`
-   All service images are downloaded from Docker Hub and launched as defined in the "docker-compose.yml" file. This file specifies which of the services run together, address,communication, etc.
+1. Clone the [data service development kit](https://github.com/industrial-edge/data-service-development-kit) repository. 
+2. Replace the docker-compose.yml with the [docker-compose.yml](../docker-compose.yml) of this repository containing Node-Red service.
+3. Start the containers by executing: `docker-compose up`
 
 ## Create Tag in Simulation UI
 
