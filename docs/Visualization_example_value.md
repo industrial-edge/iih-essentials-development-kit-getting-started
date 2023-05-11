@@ -34,20 +34,19 @@ To create a tag, follow these steps:
 1. Open a browser.
 2. Access the Simulation UI
    To start the simulation UI for the Data Service, enter the following address: `http://localhost:4519`
-3. Add a Aspect with following configuration and save it
-    - Name: Example Aspect
-    - AssetId: 1
-    - Period: 1 hour
-    - Cycle: 1 second
-4. Add a Variable with following configuration and save it
+3. Click "Create" on simulation goup. 
+4. Adjust the the settings of the simulation group and press "Create". 
+   - Cycle: 1 second
+5. Create a Variable with following configuration and save it
    - Name: Sinus
    - Datatype: int
-   - Simulation:
-     - Type: sinus
-     - Period: 1 minute
-     - Amplitude: 20
 
-![deploy VFC](../docs/graphics/aspect.png)
+6. Click on "plus" sign to add a simulation with following information
+   - Type: sinus
+   - Period: 1 minute
+   - Amplitude: 20
+
+![deploy VFC](../docs/graphics/simulation.PNG)
 
 ## Transfer Tag to Data Service
 
@@ -55,24 +54,27 @@ To connect the tag to the Data Service, follow these steps:
 
 1. Open a browser.
 2. To start the Data Service, enter the following address: `http://localhost:4203`
-3. Add a Variable in tab "Connectivity"
-   - Adapter: Simulation Connector
-   - Tag: Example Aspect/default/Sinus
+3. Go to the "Connectors" section in the left navigation bar. 
+4. Select the "Simulation Connector" and activate it under configuration. 
 
-![deploy VFC](../docs/graphics/data_service.png)
+![deploy VFC](../docs/graphics/simulationconnector.PNG)
 
+5. Go back to the "Assets & Connectivity" section in the naviogation bar. 
+6. Select "Create first variable"
+7. Select the Simulation connector and the created Sinus variable. After you are done, click on "Add variable". 
+
+![deploy VFC](../docs/graphics/addvariable.PNG)
+
+8. Thge connection status should show "Connected". 
+
+![deploy VFC](../docs/graphics/variableconnected.PNG)
 
 ## Use provided application example to access Data via Node-RED and save data in .csv file
 
-1. Create a folder in the same path where your docker-compose file is located and run the following command to make sure you have the right permission.
-   ```bash
-   mkdir export
-   sudo chown -R 1000:1000 ./export
-   ```
-2. Open a browser.
-3. Access Node-RED
+1. Open a browser.
+2. Access Node-RED
    To start Node-RED, enter the following address: `http://localhost:1880`
-4. Install the node-red-dashboard
+3. Install the node-red-dashboard
    To install the node-red-dashboard, open "Manage palette" in the menu. In the tab "Install" search for "node-red-dashboard" and install it
     ![deploy VFC](../docs/graphics/nodeRED-install.png)
 5. Import the [Flow](../src/flows.json)
