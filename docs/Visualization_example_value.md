@@ -46,7 +46,7 @@ To create a tag, follow these steps:
    - Period: 1 minute
    - Amplitude: 20
 
-![deploy VFC](../docs/graphics/simulation.PNG)
+   ![deploy VFC](../docs/graphics/simulation.PNG)
 
 ## Transfer Tag to Data Service
 
@@ -57,17 +57,17 @@ To connect the tag to the Data Service, follow these steps:
 3. Go to the "Connectors" section in the left navigation bar. 
 4. Select the "Simulation Connector" and activate it under configuration. 
 
-![deploy VFC](../docs/graphics/simulationconnector.PNG)
+   ![deploy VFC](../docs/graphics/simulationconnector.PNG)
 
 5. Go back to the "Assets & Connectivity" section in the naviogation bar. 
 6. Select "Create first variable"
 7. Select the Simulation connector and the created Sinus variable. After you are done, click on "Add variable". 
 
-![deploy VFC](../docs/graphics/addvariable.PNG)
+   ![deploy VFC](../docs/graphics/addvariable.PNG)
 
 8. Thge connection status should show "Connected". 
 
-![deploy VFC](../docs/graphics/variableconnected.PNG)
+   ![deploy VFC](../docs/graphics/variableconnected.PNG)
 
 ## Use provided application example to access Data via Node-RED and save data in .csv file
 
@@ -76,7 +76,7 @@ To connect the tag to the Data Service, follow these steps:
    To start Node-RED, enter the following address: `http://localhost:1880`
 3. Install the node-red-dashboard
    To install the node-red-dashboard, open "Manage palette" in the menu. In the tab "Install" search for "node-red-dashboard" and install it
-    ![deploy VFC](../docs/graphics/nodeRED-install.png)
+   ![deploy VFC](../docs/graphics/nodeRED-install.png)
 5. Import the [Flow](../src/flows.json)
    To import the flow, open "Import" in the menu. Select the file, that should be imported, and click on "Import"
    ![deploy VFC](../docs/graphics/nodeRED-import.png)
@@ -87,7 +87,7 @@ To connect the tag to the Data Service, follow these steps:
 7. Adjust the `From` and `To` variables based on your needs or leave it as it is for current date. 
 8. Go back to your flow and double click on the `Data Service Read Variables` sub-flow. Make sure the "Variable names" match your variable inside of the Data Service. 
 
-![deploy VFC](../docs/graphics/sub-flow-settings.PNG)
+   ![deploy VFC](../docs/graphics/sub-flow-settings.PNG)
 
  > **_NOTE:_**  If you multiple variables, you can write them all in the "Variable names" setting sparated by commas without spaces.
 
