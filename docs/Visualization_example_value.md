@@ -86,7 +86,9 @@ To connect the tag to the Data Service, follow these steps:
 6. Deploy the flow and access the dashboard by accessing `http://localhost:1880/ui`
 7. Adjust the `From` and `To` variables based on your needs or leave it as it is for current date. 
 8. Go back to your flow and double click on the `Data Service Read Variables` sub-flow. Make sure the "Variable names" match your variable inside of the Data Service. 
-   ![deploy VFC](../docs/graphics/sub-flow-settings.PNG)
+
+![deploy VFC](../docs/graphics/sub-flow-settings.PNG)
+
  > **_NOTE:_**  If you multiple variables, you can write them all in the "Variable names" setting sparated by commas without spaces.
 
 9. Activate the inject buttons as described in the picture below.
