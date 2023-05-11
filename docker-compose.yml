@@ -9,12 +9,13 @@ networks:
 volumes:
   db-edge-apps-dataservicedevelopmentkit-volume:
   db-edge-apps-simulation-volume:
+  node-red-data:
 
 
 services:
   # MQTT Broker
   simulation-broker:
-    image: <your MQTT Broker Image e.g. eclipse-mosquitto:1.6.10>
+    image: eclipse-mosquitto:1.6.10
     networks:
       - dataservicedevelopmentkit_default
     ports:
