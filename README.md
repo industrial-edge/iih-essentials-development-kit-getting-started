@@ -49,9 +49,10 @@ You can download the Data Service Development Kit Bundle to your computer from [
 
 This GitHub-Repository contains:
 
-- adapted [docker-compose.yml](./docker-compose.yml)
-- NodeRED flow: [flows.json](./src/flows.json)
-- [User documentation](./docs/Visualization_example_value.md#description)
+- docs: Here you will find the [user documentation](../docs/Visualization_example_value.md) of the applikation example and more [implementation details](../docs/Implementation.md) to understand the way it works
+- [docker-compose.yml](../docker-compose.yml): This file specifies which of the services run together, address,communication, etc.
+- [NodeRed flow](../src/flows.json)
+- [graphics](../docs/graphics) used in the documentation
 
 ## Installation
 
@@ -71,7 +72,7 @@ After the development phase, your app can be handed over to your customer togeth
 
 You can find the further information about the following steps in the [docs](./docs)
 
-Especially the following two files may help to get the application example running and to understand the way it works.
+The contained two files may help to get the application example running and to understand the way it works.
 
 - [Visualization of an example sinus in NodeRED](./docs/Visualization_example_value.md#description)
 

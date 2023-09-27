@@ -33,11 +33,11 @@ To start the Docker container, follow these steps:
    cd ./data-service-development-kit-getting-started-main
    ```
    The following components are contained in it:
-   - docs: Here you will find the user documentation of the [iih-essentials-development-kit](../docs/development-kit) and the [dockerhub](../docs/dockerhub), the [routes (OpenAPI)](../docs/iih-essentials) for the Data Service and the [graphics](../docs/graphics) from the documentation
-   - a general explanation in the [README.md](../README.md)
+   - docs: Here you will find the [user documentation](../docs/Visualization_example_value.md) of the applikation example and more [implementation details](../docs/Implementation.md) to understand the way it works
    - [docker-compose.yml](../docker-compose.yml): This file specifies which of the services run together, address,communication, etc.
-   - [NodeRed-Flows](../src/flows.json)
-   - [export](../export)-folder. This is where the data that was exported as a csv-file using NodeRed are stored
+   - [NodeRed flow](../src/flows.json)
+   - [graphics](../docs/graphics) used in the documentation
+
 4. Start the containers by executing: 
 ```bash
    docker-compose up
