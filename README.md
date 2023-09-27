@@ -34,7 +34,7 @@ The simulation tool - provided by the Development Kit - generates a **Sinus Sign
 
 ### Prerequisites
 
-- Data Service Development Kit for Industrial Edge V.1.3.0
+- Data Service Development Kit for Industrial Edge V.1.8.0
 
 You can download the Data Service Development Kit Bundle to your computer from [Siemens Industry Online Support (SIOS ID 109792717)](https://support.industry.siemens.com/cs/ww/en/view/109792717). The bundle includes the following components:
 
@@ -50,7 +50,7 @@ You can download the Data Service Development Kit Bundle to your computer from [
 This GitHub-Repository contains:
 
 - adapted [docker-compose.yml](./docker-compose.yml)
-- NodeRED flow: [flows.json](./src/NodeRED/flows.json)
+- NodeRED flow: [flows.json](./src/flows.json)
 - [User documentation](./docs/Visualization_example_value.md#description)
 
 ## Installation
@@ -71,16 +71,18 @@ After the development phase, your app can be handed over to your customer togeth
 
 You can find the further information about the following steps in the [docs](./docs)
 
+Especially the following two files may help to get the application example running and to understand the way it works.
+
 - [Visualization of an example sinus in NodeRED](./docs/Visualization_example_value.md#description)
 
- > **_NOTE - additional Information:_**  If you need more information, you can find them in the user documentation of the [Data Service Development Kit Bundle](https://support.industry.siemens.com/cs/ww/en/view/109792717).
+- [Production data extraction and visualization in NodeRED](./docs/Implementation.md#description)
 
 ## Contribution
 
 Thank you for your interest in contributing. Anybody is free to report bugs, unclear documentation, and other problems regarding this repository in the Issues section.
 Additionally everybody is free to propose any changes to this repository using Pull Requests.
 
-If you haven't previously signed the [Siemens Contributor License Agreement](https://cla-assistant.io/industrial-edge/) (CLA), the system will automatically prompt you to do so when you submit your Pull Request. This can be conveniently done through the CLA Assistant's online platform. Once the CLA is signed, your Pull Request will automatically be cleared and made ready for merging if all other test stages succeed.
+If you are interested in contributing via Pull Request, please check the [Contribution License Agreement](Siemens_CLA_1.1.pdf) and forward a signed copy to [industrialedge.industry@siemens.com](mailto:industrialedge.industry@siemens.com?subject=CLA%20Agreement%20Industrial-Edge).
 
 ## Licence and Legal Information
 
