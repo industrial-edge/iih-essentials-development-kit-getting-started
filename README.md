@@ -36,9 +36,8 @@ The simulation tool - provided by the Development Kit - generates a **Sinus Sign
 
 ![deploy VFC](docs/graphics/overview.png)  
 
-## Requirements
+## Content
 
-### Prerequisites
 To run the application example you have to download the Data Service Development Kit Getting Started
 
 This GitHub-Repository contains:
@@ -87,7 +86,7 @@ To start the Docker container, follow these steps:
    ```
    All service images are downloaded from Docker Hub and launched as defined in the "docker-compose.yml" file. 
 
-   > **_Important:_**  Complete instructions for setting up the application example can be found in the [user documentation](./docs/Visualization_example_vale.md)
+   > **_Important:_**  The complete instructions for setting up the application example can be found in the [user documentation](./docs/Visualization_example_vale.md)
 
 ## Documentation
 
