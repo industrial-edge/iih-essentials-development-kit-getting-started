@@ -86,7 +86,7 @@ To start the Docker container, follow these steps:
    ```
    All service images are downloaded from Docker Hub and launched as defined in the "docker-compose.yml" file. 
 
-   > **_Important:_**  The complete instructions for setting up the application example can be found in the [user documentation](./docs/Visualization_example_vale.md)
+   > **_Important:_**  The complete instructions for setting up the application example can be found in the [user documentation](./docs/Visualization_example_value.md)
 
 ## Documentation
 
