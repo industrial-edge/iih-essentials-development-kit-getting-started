@@ -24,61 +24,91 @@ To start the Docker container, follow these steps:
  > **_NOTE:_**  Linux device is used for this application example
 
 1. Go to your device.
-2. Open the "development-kit" folder from the downloaded and extracted zip file.
-   The following components are contained in it:
-   - documentation
-     Here you will find, for example, the user documentation and the routes (OpenAPI) for the Data Service.
-   - examples
-     Here you will find, for example, application examples.
-   - docker-compose.yml
-   - ...
-3. Replace the docker-compose.yml with the [docker-compose.yml](../docker-compose.yml) of this repository containing Node-Red service.
-4. Right-click in the file explorer and click on "Open in Terminal".
-5. Unzip the zipped file with Data Service development kit docker image. When using linux, it is recommended to use following package:
+2. Open the console in the directory in which the application is to be stored
+3. Clone the application example using the following command and then change the working directory:
 
    ```bash
-   sudo apt-get install p7zip-full p7zip-rar
-   7za x data-service-development-kit_1.3.0.zip
+   git clone <link of the git-repository>
+   
+   cd ./data-service-development-kit-getting-started-main
    ```
+   The following components are contained in it:
+   - docs: Here you will find the [user documentation](../docs/Visualization_example_value.md) of the applikation example and more [implementation details](../docs/Implementation.md) to understand the way it works
+   - [docker-compose.yml](../docker-compose.yml): This file specifies which of the services run together, address,communication, etc.
+   - [NodeRed flow](../src/flows.json)
+   - [graphics](../docs/graphics) used in the documentation
 
-6. Load the Docker Image with following command: `docker load -i dataservicedevelopmentkit_1.3.0.img`
-7. Start the containers by executing: `docker - compose up`
-   All service images are downloaded from Docker Hub and launched as defined in the "docker-compose.yml" file. This file specifies which of the services run together, address,communication, etc.
+4. Start the containers by executing: 
+```bash
+   docker-compose up
+   ```
+   All service images are downloaded from Docker Hub and launched as defined in the "docker-compose.yml" file. 
 
-## Create Tag in Simulation UI
+## Create new Tag in Simulation UI
 
 To create a tag, follow these steps:
 
 1. Open a browser.
-2. Access the Simulation UI
-   To start the simulation UI for the Data Service, enter the following address: `http://localhost:4519`
-3. Add a Aspect with following configuration and save it
-    - Name: Example Aspect
-    - AssetId: 1
-    - Period: 1 hour
-    - Cycle: 1 second
-4. Add a Variable with following configuration and save it
-   - Name: Sinus
-   - Datatype: int
-   - Simulation:
-     - Type: sinus
+2. To access the Simulation UI, enter the following address: `http://localhost:4519`
+
+3. Add a simulation group with following configuration and create it
+   - Period: 1 minute
+   - Cycle: 1 second
+
+  ![deploy VFC](../docs/graphics/dev-kit/1_Add_Variable.png)
+
+  ![deploy VFC](../docs/graphics/dev-kit/2_Create_Sim_Group.png)
+
+
+4. Add a new simulation variable to the created group
+   - set the name to "Sinus"
+   - type should be "Int"
+   - add a simulation with following configuration
+     - choose "sinus"
      - Period: 1 minute
      - Amplitude: 20
+     - Zeropoint: 0
+     - click on "Save"
+   - click on "Create"
 
-![deploy VFC](../docs/graphics/aspect.png)
+  ![deploy VFC](../docs/graphics/dev-kit/3_Create_Sim_Var.png)
 
-## Transfer Tag to Data Service
+  ![deploy VFC](../docs/graphics/dev-kit/4_New_Variable.png)
 
-To connect the tag to the Data Service, follow these steps:
+  ![deploy VFC](../docs/graphics/dev-kit/5_Sinus_Var.png)
+
+## Transfer Tag to IIH Essentials
+
+To connect the tag to the IIH Essentials, follow these steps:
 
 1. Open a browser.
-2. To start the Data Service, enter the following address: `http://localhost:4203`
-3. Add a Variable in tab "Connectivity"
-   - Adapter: Simulation Connector
-   - Tag: Example Aspect/default/Sinus
+2. To access the IIH Essentials UI, enter the following address: `http://localhost:4203`
+3. Go to connectors and configure the connector to get the data from the simulation
 
-![deploy VFC](../docs/graphics/data_service.png)
+  ![deploy VFC](../docs/graphics/dev-kit/6_Simulation_Connector.png)
 
+  ![deploy VFC](../docs/graphics/dev-kit/7_Simulation_Connector_2.png)
+
+If configured correctly, it should look like this:
+
+  ![deploy VFC](../docs/graphics/dev-kit/8_Simulation_Connector_3.png)
+
+4. Create a new asset with following configuration and add it
+    - Name: Example Asset
+
+  ![deploy VFC](../docs/graphics/dev-kit/9_Add_Asset.png)
+
+5. Create a Variable with following configuration and add it
+   - Connector: Simulation Connector
+   - Choose the created Tag "New Simulation Group/Sinus"
+
+  ![deploy VFC](../docs/graphics/dev-kit/10_Add_Var_Asset.png)
+
+  ![deploy VFC](../docs/graphics/dev-kit/11_Add_Var_Asset.png)
+
+If the simulation variable has been successfully connected to the IIH Essentials, you can see the current value of the variable.
+
+  ![deploy VFC](../docs/graphics/dev-kit/12_Preview_data.png)
 
 ## Use provided application example to access Data via Node-RED and save data in .csv file
 
@@ -90,11 +120,13 @@ To connect the tag to the Data Service, follow these steps:
 2. Open a browser.
 3. Access Node-RED
    To start Node-RED, enter the following address: `http://localhost:1880`
-4. Install the node-red-dashboard
+4. Install the node-red-dashboard if it's not installed yet
+   
    To install the node-red-dashboard, open "Manage palette" in the menu. In the tab "Install" search for "node-red-dashboard" and install it
     ![deploy VFC](../docs/graphics/nodeRED-install.png)
-5. Import the [Flow](../src/flows.json)
-   To import the flow, open "Import" in the menu. Select the file, that should be imported, and click on "Import"
+5. If the flow is missing import the [Flow](../src/flows.json)
+
+   To do so, open "Import" in the menu. Select the file, that should be imported, and click on "Import"
    ![deploy VFC](../docs/graphics/nodeRED-import.png)
    The Flow contains following nodes:
 

@@ -1,8 +1,8 @@
-# Data Service Development Kit Getting Started
+# IIH Essentials Development Kit Getting Started
 
-Using the Data Service Development Kit app you can develop your own apps based on the Data Service, test your app locally with simulated data to make sure your it behaves the same once you deploy your app to Industrial Edge. - [Data Service Development Kit Getting Started](#data-service-development-kit-getting-started)
+Using the IIH Essentials Development Kit app you can develop your own apps based on the Data Service, test your app locally with simulated data to make sure your it behaves the same once you deploy your app to Industrial Edge.
 
-- [Data Service Development Kit Getting Started](#data-service-development-kit-getting-started)
+- [IIH Essentials Development Kit Getting Started](#iih-essentials-development-kit-getting-started)
   - [Description](#description)
     - [Overview](#overview)
     - [General task](#general-task)
@@ -18,11 +18,17 @@ Using the Data Service Development Kit app you can develop your own apps based o
 
 ### Overview
 
-This example introduces the Data Service Device Kit and how to extract data from the Data Service using the available API calls.
+This application example introduces the Data Service Device Kit and how to extract data from the Data Service using the available API calls.
 The free Development Kit provides you with a Docker Image that launches the Data Service API on the developer's computer and makes it callable. With this tool, you can develop your customer's app entirely without Industrial Edge access on your development computer. Nor do you need to own a real device that provides you with data. With our simulation service, plant data can be simulated without further ado.
 
-- The Development Kit can be started with a few clicks on the development environment
-- Immediately testable of your API calls even without access to a real PLC
+Complete instructions for setting up the application example can be found in the [Installation](#installation)
+- Starting the docker container
+- After the docker container is started you can configure the parts of the application example using a web-browser:
+  - Simulation UI
+  - IIH Essentials (formerly called Data Service)
+  - NodeRED
+
+
 
 ### General task
 
@@ -30,50 +36,67 @@ The simulation tool - provided by the Development Kit - generates a **Sinus Sign
 
 ![deploy VFC](docs/graphics/overview.png)  
 
-## Requirements
+## Content
 
-### Prerequisites
-
-- Data Service Development Kit for Industrial Edge V.1.3.0
-
-You can download the Data Service Development Kit Bundle to your computer from [Siemens Industry Online Support (SIOS ID 109792717)](https://support.industry.siemens.com/cs/ww/en/view/109792717). The bundle includes the following components:
-
-- Docker app: docker-compose.yml
-- User documentation
-- OpenAPI specification
-- Application example
-- Docker image
-- Data simulator
-- MQTT Broker
-- Data Service (with external interface (REST API) for non-Siemens applications)
+To run the application example you have to download the Data Service Development Kit Getting Started
 
 This GitHub-Repository contains:
+- docs: Here you will find the [user documentation](./docs/Visualization_example_value.md) of the application example and more [implementation details](./docs/Implementation.md) to understand the way it works
+- [NodeRed flow](./src/flows.json) for the visualization of the data
+- [graphics](./docs/graphics) used in the documentation
+- [docker-compose.yml](./docker-compose.yml): This file specifies which of the services run together, address, communication, etc.
 
-- adapted [docker-compose.yml](./docker-compose.yml)
-- NodeRED flow: [flows.json](./src/NodeRED/flows.json)
-- [User documentation](./docs/Visualization_example_value.md#description)
+> **_NOTE:_** The Docker images used no longer have to be loaded manually, but are automatically downloaded directly from github. (as specified in the [docker-compose.yml](./docker-compose.yml))
+
+That file defines the use of the following images:
+
+- IIH Essentials Development Kit for Industrial Edge V.1.8.0
+- Data Simulator (dataservicesimulation:1.5.2)
+- MQTT Broker (eclipse-mosquitto:1.6.10)
+- Data Service (with external interface (REST API) for non-Siemens applications) (postgres:9.6.16-alpine)
+- nodeRED (node-red:1.3.4)
 
 ## Installation
 
-The following services must be installed:
+The following service must be installed:
 
 - Docker for Linux
   
  > **_NOTE:_**  Linux device is used for this application example
 
-## Usage
+### Start Docker Container
 
-The Data Service Development Kit offers you the possibility to make your app  fit for Industrial Edge. Using the integrated API interface, you save your app's data to the Data Service database structure and retrieve it when needed. This means that other apps, such as Performance Insight or Notifier, can easily access the data and use it for themselves.
+To start the Docker container, follow these steps:
 
-After the development phase, your app can be handed over to your customer together with the Data Service. In a few steps, the customer connects the Data Service with the already available connectors and thus creates a quick link to his plant.
+
+1. Go to your device.
+2. Open the console in the directory in which the application is to be stored
+3. Clone the application example using the following command and then change the working directory:
+
+   ```bash
+   git clone <link of the git-repository>
+   
+   cd ./data-service-development-kit-getting-started
+   ```
+
+
+4. Start the containers by executing: 
+```bash
+   docker-compose up
+   ```
+   All service images are downloaded from Docker Hub and launched as defined in the "docker-compose.yml" file. 
+
+   > **_Important:_**  The complete instructions for setting up the application example can be found in the [user documentation](./docs/Visualization_example_value.md#description)
 
 ## Documentation
 
 You can find the further information about the following steps in the [docs](./docs)
 
-- [Visualization of an example sinus in NodeRED](./docs/Visualization_example_value.md#description)
+The contained two files may help to get the application example running and to understand the way it works:
 
- > **_NOTE - additional Information:_**  If you need more information, you can find them in the user documentation of the [Data Service Development Kit Bundle](https://support.industry.siemens.com/cs/ww/en/view/109792717).
+- [Visualization of an example sinus in NodeRED (user documentation)](./docs/Visualization_example_value.md#description)
+
+- [Production data extraction and visualization in NodeRED](./docs/Implementation.md#description)
 
 ## Contribution
 
