@@ -1,8 +1,8 @@
-# Data Service Development Kit Getting Started
+# IIH Essentials Development Kit Getting Started
 
-Using the Data Service Development Kit app you can develop your own apps based on the Data Service, test your app locally with simulated data to make sure your it behaves the same once you deploy your app to Industrial Edge.
+Using the IIH Essentials Development Kit app you can develop your own apps based on the Data Service, test your app locally with simulated data to make sure your it behaves the same once you deploy your app to Industrial Edge.
 
-- [Data Service Development Kit Getting Started](#data-service-development-kit-getting-started)
+- [IIH Essentials Development Kit Getting Started](#iih-essentials-development-kit-getting-started)
   - [Description](#description)
     - [Overview](#overview)
     - [General task](#general-task)
@@ -76,7 +76,7 @@ To start the Docker container, follow these steps:
    ```bash
    git clone <link of the git-repository>
    
-   cd ./data-service-development-kit-getting-started-main
+   cd ./data-service-development-kit-getting-started
    ```
 
 
