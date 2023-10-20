@@ -6,13 +6,12 @@ Using the IIH Essentials Development Kit app you can develop your own apps based
   - [Description](#description)
     - [Overview](#overview)
     - [General task](#general-task)
-  - [Requirements](#requirements)
-    - [Prerequisites](#prerequisites)
+  - [Content](#content)
   - [Installation](#installation)
-  - [Usage](#usage)
   - [Documentation](#documentation)
   - [Contribution](#contribution)
   - [Licence and Legal Information](#licence-and-legal-information)
+
 
 ## Description
 
