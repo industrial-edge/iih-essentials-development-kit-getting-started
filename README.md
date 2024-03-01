@@ -2,10 +2,6 @@
 
 Using the IIH Essentials Development Kit you can develop apps based on the IIH Essentials and integrate them into Siemens Industrial Edge.
 
-To learn more about IIH Essentials and the Development Kit refer to the following links:
-- [What is IIH Essentials?](https://industrial-edge.github.io/iih-essentials-development-kit/iih-essentials/introduction-to-iih-essentials/what-is-iih-essentials/)
-- [IIH Essentials Development Kit](https://github.com/industrial-edge/iih-essentials-development-kit.git)
-
 - [IIH Essentials Development Kit Getting Started](#iih-essentials-development-kit-getting-started)
   - [Description](#description)
     - [Overview](#overview)
@@ -17,6 +13,9 @@ To learn more about IIH Essentials and the Development Kit refer to the followin
   - [Contribution](#contribution)
   - [Licence and Legal Information](#licence-and-legal-information)
 
+To learn more about IIH Essentials and the Development Kit refer to the following links:
+- [What is IIH Essentials?](https://industrial-edge.github.io/iih-essentials-development-kit/iih-essentials/introduction-to-iih-essentials/what-is-iih-essentials/)
+- [IIH Essentials Development Kit](https://github.com/industrial-edge/iih-essentials-development-kit.git)
 
 ## Description
 
