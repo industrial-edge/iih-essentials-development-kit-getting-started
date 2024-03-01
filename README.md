@@ -13,10 +13,6 @@ Using the IIH Essentials Development Kit you can develop apps based on the IIH E
   - [Contribution](#contribution)
   - [Licence and Legal Information](#licence-and-legal-information)
 
-To learn more about IIH Essentials and the Development Kit refer to the following links:
-- [What is IIH Essentials?](https://industrial-edge.github.io/iih-essentials-development-kit/iih-essentials/introduction-to-iih-essentials/what-is-iih-essentials/)
-- [IIH Essentials Development Kit](https://github.com/industrial-edge/iih-essentials-development-kit.git)
-
 ## Description
 
 ### Overview
@@ -90,15 +86,24 @@ To start the Docker container, follow these steps:
 
   > **_Important:_**  The complete instructions for setting up the application example can be found in the [user documentation](./docs/Visualization_example_value.md#description)
 
-## Documentation
-
-You can find the further information about the following steps in the [docs](./docs)
+You can find the detailed information about the installation steps in the [docs](./docs)
 
 The contained two files help you to get the application example up and running and to understand the way it works:
 
 - [Visualization of an example sinus in Node-RED (user documentation)](./docs/Visualization_example_value.md#description)
 
 - [Production data extraction and visualization in Node-RED](./docs/Implementation.md#description)
+
+## Documentation
+
+- You can find further documentation and help in the following links
+  - [Industrial Edge Hub](https://iehub.eu1.edge.siemens.cloud/#/documentation)
+  - [Industrial Edge Forum](https://forum.mendix.com/link/space/industrial-edge)
+  - [Industrial Edge landing page](https://new.siemens.com/global/en/products/automation/topic-areas/industrial-edge/simatic-edge.html)
+  - [Industrial Edge GitHub page](https://github.com/industrial-edge)
+  - [Industrial Edge documentation page](https://docs.eu1.edge.siemens.cloud/index.html)
+  - [What is IIH Essentials?](https://industrial-edge.github.io/iih-essentials-development-kit/iih-essentials/introduction-to-iih-essentials/what-is-iih-essentials/)
+  - [IIH Essentials Development Kit](https://github.com/industrial-edge/iih-essentials-development-kit.git)
 
 ## Contribution
 
