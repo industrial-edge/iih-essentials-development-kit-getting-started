@@ -1,19 +1,19 @@
-# Visualization of an example sinus in NodeRED
+# Visualization of an example sinus in Node-RED
 
-- [Visualization of an example sinus in NodeRED](#visualization-of-an-example-sinus-in-nodered)
+- [Visualization of an example sinus in Node-RED](#visualization-of-an-example-sinus-in-node-red)
   - [Description](#description)
   - [Start Docker Container](#start-docker-container)
-  - [Create Tag in Simulation UI](#create-tag-in-simulation-ui)
-  - [Transfer Tag to Data Service](#transfer-tag-to-data-service)
-  - [Use provided application example to access Data via Node-RED and save data in .csv file](#use-provided-application-example-to-access-data-via-node-red-and-save-data-in-csv-file)
+  - [Create new Tag in Simulation UI](#create-new-tag-in-simulation-ui)
+  - [Transfer Tag to IIH Essentials](#transfer-tag-to-iih-essentials)
+  - [Use Node-RED to access data and save it in .csv file](#use-node-red-to-access-data-and-save-it-in-csv-file)
   
 ## Description
 
-This example is intended to show you how to use this application on a example sinus variable.
+This example is intended to show you how to use this application using a sinus variable.
 
-You will create a tag in the Simulation UI, connect the tag with the data service, display the tag via browser and finally visualize the tag via Node-RED.
+You will create a tag in the Simulation UI, connect the tag with IIH Essentials, display the tag via browser and finally visualize the tag via Node-RED.
 
-If you are interested in how the application example works, [here](./Implementation.md) you can find more details.
+If you are interested in how the application example works in the [implementation guide](./Implementation.md) you can find more details.
 
 To follow this application example, you must carry out the following steps:
 
@@ -21,35 +21,35 @@ To follow this application example, you must carry out the following steps:
 
 To start the Docker container, follow these steps:
 
- > **_NOTE:_**  Linux device is used for this application example
+ > **_NOTE:_**  Linux is used for this application example
 
-1. Go to your device.
-2. Open the console in the directory in which the application is to be stored
+1. Go to your Linux system.
+2. Open the console in the directory in which the application should be stored
 3. Clone the application example using the following command and then change the working directory:
-
-   ```bash
-   git clone <link of the git-repository>
+  ```bash
+  git clone https://github.com/industrial-edge/iih-essentials-development-kit-getting-started.git
    
-   cd ./data-service-development-kit-getting-started-main
-   ```
-   The following components are contained in it:
-   - docs: Here you will find the [user documentation](../docs/Visualization_example_value.md) of the applikation example and more [implementation details](../docs/Implementation.md) to understand the way it works
-   - [docker-compose.yml](../docker-compose.yml): This file specifies which of the services run together, address,communication, etc.
-   - [NodeRed flow](../src/flows.json)
-   - [graphics](../docs/graphics) used in the documentation
+  cd ./iih-essentials-development-kit-getting-started
+  ```
+
+  This downloaded GitHub-Repository contains:
+  - [Docs](./docs): Here you will find the [user documentation](./docs/Visualization_example_value.md) of the application example and more [implementation details](./docs/Implementation.md) to understand the way it works
+  - [Node-RED flow](./src/flows.json) for the visualization of the data
+  - [docker-compose.example.yml](./docker-compose.example.yml): An example docker compose file that can be used to run this application example which specifies the services, addresses, communication, etc.
 
 4. Start the containers by executing: 
-```bash
-   docker-compose up
-   ```
-   All service images are downloaded from Docker Hub and launched as defined in the "docker-compose.yml" file. 
+  ```bash
+  docker-compose up
+  ```
+
+  All service images are downloaded from Docker Hub and launched as defined in the `docker-compose.yml` file. 
 
 ## Create new Tag in Simulation UI
 
 To create a tag, follow these steps:
 
 1. Open a browser.
-2. To access the Simulation UI, enter the following address: `http://localhost:4519`
+2. To access the Simulation UI, enter the following address: http://localhost:4519
 
 3. Add a simulation group with following configuration and create it
    - Period: 1 minute
@@ -82,7 +82,7 @@ To create a tag, follow these steps:
 To connect the tag to the IIH Essentials, follow these steps:
 
 1. Open a browser.
-2. To access the IIH Essentials UI, enter the following address: `http://localhost:4203`
+2. To access the IIH Essentials UI, enter the following address: http://localhost:4203
 3. Go to connectors and configure the connector to get the data from the simulation
 
   ![deploy VFC](../docs/graphics/dev-kit/6_Simulation_Connector.png)
@@ -110,19 +110,19 @@ If the simulation variable has been successfully connected to the IIH Essentials
 
   ![deploy VFC](../docs/graphics/dev-kit/12_Preview_data.png)
 
-## Use provided application example to access Data via Node-RED and save data in .csv file
+## Use Node-RED to access data and save it in .csv file
 
-1. Create a folder in the same path where your docker-compose file is located and run the following command to make sure you have the right permission.
+1. Create a folder in the same path where your docker compose file is located and run the following command to make sure you have the right permission.
    ```bash
    mkdir export
    sudo chown -R 1000:1000 ./export
    ```
 2. Open a browser.
 3. Access Node-RED
-   To start Node-RED, enter the following address: `http://localhost:1880`
-4. Install the node-red-dashboard if it's not installed yet
+   To start Node-RED, enter the following address: http://localhost:1880
+4. Install the `node-red-dashboard` if it's not installed yet
    
-   To install the node-red-dashboard, open "Manage palette" in the menu. In the tab "Install" search for "node-red-dashboard" and install it
+   To install the node-red-dashboard, open "Manage palette" in the menu. In the tab "Install" search for `node-red-dashboard` and install it
     ![deploy VFC](../docs/graphics/nodeRED-install.png)
 5. If the flow is missing import the [Flow](../src/flows.json)
 
@@ -133,7 +133,7 @@ If the simulation variable has been successfully connected to the IIH Essentials
    ![deploy VFC](../docs/graphics/flow_nodes.PNG)
 6. Deploy the flow and access the dashboard by accessing `http://localhost:1880/ui`
 7. Adjust the `From` and `To` variables based on your needs or leave it as it is for current date. 
-8. Go back to your flow and double click on the `Data Service Read Variables` sub-flow. Make sure the "Variable names" match your variable inside of the Data Service. 
+8. Go back to your flow and double click on the `IIH Essentials Read Variables` sub-flow. Make sure the "Variable names" match your variable inside of IIH Essentials. 
    ![deploy VFC](../docs/graphics/sub-flow-settings.PNG)
  > **_NOTE:_**  If you multiple variables, you can write them all in the "Variable names" setting sparated by commas without spaces.
 
